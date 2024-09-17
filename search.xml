@@ -4,9 +4,28 @@
   
     
     <entry>
+      <title>open-webui</title>
+      <link href="/Notepad/18356.html"/>
+      <url>/Notepad/18356.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="open-webui"><a href="#open-webui" class="headerlink" title="open-webui"></a>open-webui</h3><p>Open WebUI 是一个可扩展、功能丰富且用户友好的自托管 WebUI，旨在完全离线运行。它支持各种 LLM 运行程序，包括 Ollama 和 OpenAI 兼容的 API。有关更多信息，请务必查看我们的 Open WebUI 文档。</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>官方安装地址：<a href="https://docs.openwebui.com/getting-started/">https://docs.openwebui.com/getting-started/</a> 有两种安装方式，docker和源码。 熟悉docker的同学可以采用该方式。 本文以源码的形式进行安装。</p><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><p>熟练使用python</p><p>🐰 Node.js &gt;&#x3D; 20.10</p><p>🐍 Python &gt;&#x3D; 3.11</p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">克隆代码</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/open-webui/open-webui.git</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> open-webui/</span><br><span class="line"></span><br><span class="line">拷贝.<span class="built_in">env</span>文件，可鼠标右键复制粘贴</span><br><span class="line"><span class="comment"># Copying required .env file</span></span><br><span class="line"><span class="built_in">cp</span> -RPp .env.example .<span class="built_in">env</span></span><br><span class="line"></span><br><span class="line">构建前端页面</span><br><span class="line"><span class="comment"># Building Frontend Using Node</span></span><br><span class="line">npm i</span><br><span class="line">npm run build</span><br><span class="line"></span><br><span class="line">构建后端</span><br><span class="line"><span class="comment"># Serving Frontend with the Backend</span></span><br><span class="line"><span class="built_in">cd</span> ./backend</span><br><span class="line">pip install -r requirements.txt -U</span><br><span class="line"></span><br><span class="line">启动服务</span><br><span class="line">linux or mac:bash start.sh</span><br><span class="line">windows:start_windows.bat</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="https://i.111666.best/image/9Z2Gm0QsdVbjTovgQ1Chjk.png" alt="image"></p><h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>打开地址：127.0.0.1:8000</p><p>第一次打开的时候，需要注册一个账号。（如admin&#x2F;admin） 册的第一个用户默认为管理员账号，以后注册的账号角色均为pending（待分配权限）。</p><h3 id="选择模型"><a href="#选择模型" class="headerlink" title="选择模型"></a>选择模型</h3><p><img src="https://i.111666.best/image/4RyYbD1wMNXqdIlTQgNBlD.png" alt="image"></p><h3 id="开始对话"><a href="#开始对话" class="headerlink" title="开始对话"></a>开始对话</h3><p><img src="https://i.111666.best/image/kq9GxpCxK8IDzfrN4ABGWx.png" alt="image"></p><h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>收工</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 大语言模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>无病呻吟</title>
-      <link href="/Notepad/undefined.html"/>
-      <url>/Notepad/undefined.html</url>
+      <link href="/Notepad/10218.html"/>
+      <url>/Notepad/10218.html</url>
       
         <content type="html"><![CDATA[<!-- <div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style> --><hr><p><code>熬夜</code>，对我来说，是一种独特的享受。夜晚的氛围有种无法言喻的魅力，让我沉浸在一个完全不同的世界里。一个人静静地待在房间中，音乐在耳边轻轻流淌，窗外的黑夜和微弱的路灯交织成了一幅宁静的画面。没有白天的炫目阳光和嘈杂声响，一切都显得格外静谧，心情也变得格外舒缓。</p><p>在这样的深夜里，我仿佛进入了另一个自我。烦恼被暂时搁置，我尽情享受这段孤独的时光，仿佛与外界隔绝，所有的困扰都变得微不足道。</p><p>或许，这正是我逃避现实的方式——面对明天的未知与迷茫，我选择沉浸在这漫长的黑夜中，躲避黎明的到来。</p><p>…</p><p>当第一缕晨光悄悄探入房间，困意开始悄然而至，像是夜晚最后的余晖。</p><p>愿这片刻的宁静，能为即将到来的白昼带来一丝温暖。</p><p>晚安，世界。</p><p>哦，不，现在是早安了~</p><hr>]]></content>
       
