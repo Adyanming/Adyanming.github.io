@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Claude Code 高阶使用技巧 | Cmm's Blog</title><meta name="author" content="zhou"><meta name="copyright" content="zhou"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Claude Code 高阶使用技巧本内容梳理了Claude Code的安装、核心功能、高级特性、集成能力及可视化工具等方面的使用技巧，旨在提供一份全面的参考资料。 一、 Claude Code 基础设置与启动Claude Code是一款流行的AI编程工具，以下为其基础设置与启动方式：  前提条件:  确保已安装 Node.js。  安装步骤:    复制Claude Code的安装命令。 打开命">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Code 高阶使用技巧">
+<meta property="og:url" content="http://example.com/Notepad/12074.html">
+<meta property="og:site_name" content="Cmm&#39;s Blog">
+<meta property="og:description" content="Claude Code 高阶使用技巧本内容梳理了Claude Code的安装、核心功能、高级特性、集成能力及可视化工具等方面的使用技巧，旨在提供一份全面的参考资料。 一、 Claude Code 基础设置与启动Claude Code是一款流行的AI编程工具，以下为其基础设置与启动方式：  前提条件:  确保已安装 Node.js。  安装步骤:    复制Claude Code的安装命令。 打开命">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/avatar.png">
+<meta property="article:published_time" content="2025-09-19T04:30:00.000Z">
+<meta property="article:modified_time" content="2025-09-19T04:25:11.757Z">
+<meta property="article:author" content="zhou">
+<meta property="article:tag" content="Claude">
+<meta property="article:tag" content="AI工具">
+<meta property="article:tag" content="编程工具">
+<meta property="article:tag" content="开发技巧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/Notepad/12074.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Claude Code 高阶使用技巧',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-09-19 12:25:11'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/style.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 隧道</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Cmm's Blog"><span class="site-name">Cmm's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 隧道</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Claude Code 高阶使用技巧</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-19T04:30:00.000Z" title="发表于 2025-09-19 12:30:00">2025-09-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-19T04:25:11.757Z" title="更新于 2025-09-19 12:25:11">2025-09-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Claude Code 高阶使用技巧"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Claude-Code-高阶使用技巧"><a href="#Claude-Code-高阶使用技巧" class="headerlink" title="Claude Code 高阶使用技巧"></a>Claude Code 高阶使用技巧</h1><p>本内容梳理了Claude Code的安装、核心功能、高级特性、集成能力及可视化工具等方面的使用技巧，旨在提供一份全面的参考资料。</p>
+<h2 id="一、-Claude-Code-基础设置与启动"><a href="#一、-Claude-Code-基础设置与启动" class="headerlink" title="一、 Claude Code 基础设置与启动"></a>一、 Claude Code 基础设置与启动</h2><p>Claude Code是一款流行的AI编程工具，以下为其基础设置与启动方式：</p>
+<ul>
+<li><p><strong>前提条件</strong>:</p>
+</li>
+<li><p>确保已安装 <strong>Node.js</strong>。</p>
+</li>
+<li><p><strong>安装步骤</strong>:</p>
+</li>
+</ul>
+<ol>
+<li>复制Claude Code的安装命令。</li>
+<li>打开命令行窗口，执行安装命令。</li>
+<li>安装完成后，使用<code>cd</code>命令进入需要编写代码的项目目录。</li>
+</ol>
+<ul>
+<li><strong>启动方式</strong>:</li>
+<li><strong>官方账户登录</strong>: 若为Claude Code官网Pro或Max级别用户，直接输入命令<code>Claude</code>启动，并选择第一项前往官网登录。</li>
+<li><strong>API接入 (通过Claude Code Router)</strong>:<br>*  利用开源项目 **Claude Code Router (CCR)**，可将任意大型模型API接入Claude Code。<br>*  启动命令为<code>CCR Code</code>。<br>*  关于CCR的免费使用方式及具体操作，可参考相关资料。</li>
+</ul>
+<h2 id="二、-核心命令与上下文管理"><a href="#二、-核心命令与上下文管理" class="headerlink" title="二、 核心命令与上下文管理"></a>二、 核心命令与上下文管理</h2><p>以下为Claude Code在日常交互中至关重要的命令及其功能：</p>
+<h3 id="1-项目与上下文初始化"><a href="#1-项目与上下文初始化" class="headerlink" title="1. 项目与上下文初始化"></a>1. 项目与上下文初始化</h3><ul>
+<li><strong><code>/init</code></strong>:</li>
+<li><strong>功能</strong>: 命令Claude Code通读整个文件夹中的所有文件，深入分析当前项目。</li>
+<li><strong>效果</strong>: 将学习到的项目知识保存到当前目录下的 <strong><code>Claude.md</code></strong> 文件中。</li>
+<li><strong>作用</strong>: 后续与Claude Code的所有对话都将以该文件作为上下文，有助于AI更快理解项目。</li>
+<li><strong>自定义</strong>: 用户可以手动修改<code>Claude.md</code>文件，补充重要信息（例如CSS框架知识），以提升AI理解的精准度和速度，类似于Cursor工具中的Cursor Rule。</li>
+</ul>
+<h3 id="2-对话上下文优化"><a href="#2-对话上下文优化" class="headerlink" title="2. 对话上下文优化"></a>2. 对话上下文优化</h3><ul>
+<li><p><strong><code>/compact</code></strong>:</p>
+</li>
+<li><p><strong>功能</strong>: 压缩对话上下文。</p>
+</li>
+<li><p><strong>效果</strong>: 排除之前对话中无关紧要的内容，有效提高AI的专注力，并显著降低Token消耗。</p>
+</li>
+<li><p><strong>使用</strong>: 可以在命令后输入具体指令，指导AI如何进行压缩。</p>
+</li>
+<li><p><strong><code>/clear</code></strong>:</p>
+</li>
+<li><p><strong>功能</strong>: 清除与AI的对话记录。</p>
+</li>
+<li><p><strong>使用时机</strong>: 每次开启新任务前应使用此命令，以保持上下文的清洁。</p>
+</li>
+<li><p><strong>作用</strong>: 有助于AI更专注地执行新任务。</p>
+</li>
+</ul>
+<h3 id="3-模型思考深度控制"><a href="#3-模型思考深度控制" class="headerlink" title="3. 模型思考深度控制"></a>3. 模型思考深度控制</h3><ul>
+<li><strong><code>think</code></strong>, <strong><code>think hard</code></strong>, <strong><code>think harder</code></strong>, <strong><code>ultra think</code></strong>:</li>
+<li><strong>性质</strong>: 这是Claude Code官方支持的，用于控制模型思考长度的指令，并非提示词技巧。</li>
+<li><strong>强度</strong>: 四种指令强度逐级递增。</li>
+<li><strong>应用</strong>: 在开始需要复杂推理的任务之前，可以添加这些思考提示词，以加大AI的思考深度。</li>
+</ul>
+<h3 id="4-命令行交互与记忆模式"><a href="#4-命令行交互与记忆模式" class="headerlink" title="4. 命令行交互与记忆模式"></a>4. 命令行交互与记忆模式</h3><ul>
+<li><p><strong><code>!</code> (感叹号)</strong>:</p>
+</li>
+<li><p><strong>功能</strong>: 将对话窗口切换为命令行模式。</p>
+</li>
+<li><p><strong>作用</strong>: 允许执行临时命令行命令（例如<code>npm install</code>），无需额外开启窗口。</p>
+</li>
+<li><p><strong>优势</strong>: 命令的执行结果和过程会自动加入Claude Code的对话上下文，使AI能够从历史记录中了解依赖安装情况，避免重复安装。</p>
+</li>
+<li><p><strong><code>#</code> (井号)</strong>:</p>
+</li>
+<li><p><strong>功能</strong>: 进入记忆模式。</p>
+</li>
+<li><p><strong>效果</strong>: 用户输入的后续内容将被Claude Code以文件形式记录，并转化为AI的长期记忆。</p>
+</li>
+<li><p><strong>记忆存储位置</strong>:<br>*  <strong>项目级别</strong>: 直接保存在当前项目的<code>cloud.md</code>文件中。<br>*  <strong>用户级别</strong>: 保存在Claude Code的配置文件中（例如，Windows系统路径为<code>C:\Users\\.cloud\cloud.md</code>）。用户级别的记忆对所有文件夹和项目生效，作为Claude Code的全局记忆或系统提示词。</p>
+</li>
+</ul>
+<h2 id="三、-IDE集成与非交互模式"><a href="#三、-IDE集成与非交互模式" class="headerlink" title="三、 IDE集成与非交互模式"></a>三、 IDE集成与非交互模式</h2><h3 id="1-IDE集成"><a href="#1-IDE集成" class="headerlink" title="1. IDE集成"></a>1. IDE集成</h3><ul>
+<li><strong><code>/IDE</code></strong>:</li>
+<li><strong>前提</strong>: 在常用IDE工具（如VSCode）中安装 <strong>Claude Code for VSCode</strong> 插件。</li>
+<li><strong>步骤</strong>: 输入<code>/IDE</code>，选择对应的IDE（如VSCode），完成集成。</li>
+<li><strong>主要功能</strong>:<br>*  <strong>代码感知</strong>: Claude Code能够感知并读取在IDE中选中的代码，用户可询问AI关于选中代码的功能。<br>*  <strong>代码修改对比</strong>: 当Claude Code进行代码修改时，会在IDE中弹出修改前后对比页面，直观展示差异，用户可在Claude Code中选择是否接受这些修改。</li>
+</ul>
+<h3 id="2-非交互模式"><a href="#2-非交互模式" class="headerlink" title="2. 非交互模式"></a>2. 非交互模式</h3><ul>
+<li><strong><code>cloud -p &lt;问题&gt;</code></strong> (或 <strong><code>CCR Code -p &lt;问题&gt;</code></strong> 当使用Claude Code Router时):</li>
+<li><strong>模式</strong>: 开启临时的、一次性的非交互式对话。</li>
+<li><strong>过程</strong>: Claude Code会在后台进行思考，调用工具处理问题，完成后将结果打印输出。</li>
+<li><strong>应用</strong>: 将Claude Code转变为命令行中的AI智能助手。</li>
+</ul>
+<h2 id="四、-模型上下文协议-MCP"><a href="#四、-模型上下文协议-MCP" class="headerlink" title="四、 模型上下文协议 (MCP)"></a>四、 模型上下文协议 (MCP)</h2><h3 id="1-MCP-定义与原理"><a href="#1-MCP-定义与原理" class="headerlink" title="1. MCP 定义与原理"></a>1. MCP 定义与原理</h3><ul>
+<li><strong>全称</strong>: Model Context Protocol (模型上下文协议)。</li>
+<li><strong>作用</strong>: MCP服务（或称MCP Server）作为AI与外部工具之间的中间层，代替人类访问并操作外部工具。</li>
+<li><strong>原理</strong>: 旨在帮助AI查找最新代码文档并进行交互。</li>
+</ul>
+<h3 id="2-MCP-安装与管理"><a href="#2-MCP-安装与管理" class="headerlink" title="2. MCP 安装与管理"></a>2. MCP 安装与管理</h3><ul>
+<li><p><strong>安装MCP (<code>cloud mcp add &lt;名称&gt;</code>)</strong>:</p>
+</li>
+<li><p><strong>示例</strong>: 安装<code>context7</code>（一个用于查找最新代码文档的MCP Server）。</p>
+</li>
+<li><p><strong>步骤</strong>:<br>1. 退出Claude Code。<br>2. 执行命令<code>cloud mcp add context7</code>。<br>3. 执行MCP Server的启动命令（例如<code>mpx -- &lt;启动参数&gt;</code>）。</p>
+</li>
+<li><p><strong>安装范围</strong>:<br>*  <strong>项目级别</strong>: 默认安装，仅在当前项目下生效。<br>*  <strong>用户级别</strong>: 可通过添加参数<code>--scope user</code>进行安装，对所有项目生效。</p>
+</li>
+<li><p><strong>查看已安装MCP</strong>: 在Claude Code中输入<code>/mcp</code>，回车即可查看。</p>
+</li>
+<li><p><strong>使用示例</strong>:</p>
+</li>
+</ul>
+<ol>
+<li>要求AI使用<code>context7</code>查找如何配置Tailwind 4。</li>
+<li>要求AI使用<code>context7</code>将当前Tailwind V3项目升级到V4。</li>
+<li>AI会调用MCP工具查找文档，整理升级步骤，并逐个文件进行修改，最终完成项目升级。</li>
+</ol>
+<ul>
+<li><p><strong>删除MCP (<code>cloud mcp remove &lt;名称&gt;</code>)</strong>:</p>
+</li>
+<li><p><strong>步骤</strong>: 退出Claude Code，执行命令<code>cloud mcp remove context7</code>。</p>
+</li>
+<li><p><strong>远程调用MCP</strong>:</p>
+</li>
+<li><p><strong>SSE协议</strong>: <code>cloud mcp add &lt;名称&gt; --protocol sse --url &lt;服务地址&gt;</code></p>
+</li>
+<li><p><strong>Streamable HTTP协议</strong>: <code>cloud mcp add &lt;名称&gt; --protocol streamable-http --url &lt;服务地址&gt;</code></p>
+</li>
+<li><p><strong>示例</strong>: 配置一个Nyan数据库的MCP，使AI能够调用Nyan的MCP查找数据库中的表。</p>
+</li>
+</ul>
+<h2 id="五、-权限管理"><a href="#五、-权限管理" class="headerlink" title="五、 权限管理"></a>五、 权限管理</h2><h3 id="1-精细化权限控制"><a href="#1-精细化权限控制" class="headerlink" title="1. 精细化权限控制"></a>1. 精细化权限控制</h3><ul>
+<li><strong><code>/permissions</code></strong>:</li>
+<li><strong>功能</strong>: 自定义Claude Code调用工具的规则。</li>
+<li><strong><code>allow</code> (允许)</strong>:<br>*  <strong>用途</strong>: 将工具添加到允许列表后，Claude Code调用这些工具时无需再征求用户同意，可自动执行。<br>*  <strong>规则示例</strong>: <code>bash(git commit)</code> 表示允许自动执行Git commit命令。<br>*  <strong>存储级别</strong>: 配置可保存为项目设置或用户设置。<br>*  <strong>MCPs</strong>: 可将MCP Server（例如<code>mcp__Nyan</code>）放入允许列表。</li>
+<li><strong><code>deny</code> (禁止)</strong>:<br>*  <strong>用途</strong>: 定义Claude Code禁止使用的工具。<br>*  <strong>内置工具</strong>: 可在Claude Code官方文档中查找所有内置工具的名称。<br>*  <strong>MCPs</strong>: 可以禁止特定MCPs的使用。</li>
+</ul>
+<h3 id="2-高权限模式"><a href="#2-高权限模式" class="headerlink" title="2. 高权限模式"></a>2. 高权限模式</h3><ul>
+<li><strong><code>--dangerously-skip-permissions</code></strong>:</li>
+<li><strong>使用方式</strong>: 在启动Claude Code时添加此参数（例如<code>cloud --dangerously-skip-permissions</code>或<code>CCR Code --dangerously-skip-permissions</code>）。</li>
+<li><strong>效果</strong>: 赋予Claude Code最高权限，使其在使用任意工具和执行任意命令时，无需申请权限即可自动执行。</li>
+</ul>
+<h2 id="六、-自定义命令与钩子-Hooks"><a href="#六、-自定义命令与钩子-Hooks" class="headerlink" title="六、 自定义命令与钩子 (Hooks)"></a>六、 自定义命令与钩子 (Hooks)</h2><h3 id="1-自定义命令"><a href="#1-自定义命令" class="headerlink" title="1. 自定义命令"></a>1. 自定义命令</h3><ul>
+<li><p><strong>位置</strong>:</p>
+</li>
+<li><p><strong>项目级别</strong>: 项目目录下的 <code>.cloud/commands/</code> 文件夹。</p>
+</li>
+<li><p><strong>用户级别</strong>: Claude Code配置目录下的 <code>commands/</code> 文件夹（对所有项目生效）。</p>
+</li>
+<li><p><strong>创建</strong>: 在<code>commands</code>文件夹中创建文件，文件名即为命令名称。</p>
+</li>
+<li><p><strong>示例</strong>: 创建<code>codereview.md</code>文件作为代码审核命令。</p>
+</li>
+<li><p><strong>内容</strong>: 使用自然语言描述命令需要执行的任务。</p>
+</li>
+<li><p><strong>参数传递</strong>: 使用 <code>$arguments</code> 作为传入参数的占位符。</p>
+</li>
+<li><p><strong>示例</strong>: 命令可以接收一个分支名参数，对比该分支与主分支的差异并提出审核意见。</p>
+</li>
+<li><p><strong>执行</strong>: 在Claude Code中输入<code>/</code>即可找到自定义命令，后接空格并输入参数（例如<code>/codereview Telwyn_four_branch</code>）。</p>
+</li>
+<li><p><strong>结果</strong>: Claude Code会执行相应的Git diff命令，并给出完整的Code Review意见。</p>
+</li>
+</ul>
+<h3 id="2-钩子-Hooks"><a href="#2-钩子-Hooks" class="headerlink" title="2. 钩子 (Hooks)"></a>2. 钩子 (Hooks)</h3><ul>
+<li><p><strong>功能</strong>: 让Claude Code在工作流程的特定节点自动执行某些操作。</p>
+</li>
+<li><p><strong>配置文件</strong>: <code>.cloud/settings.json</code> 或优先级更高的 <code>.cloud/settings.local.json</code>。</p>
+</li>
+<li><p><strong>配置示例</strong>:</p>
+</li>
+<li><p><strong>定义时机</strong>: <code>hooks</code> 中定义执行时机，例如<code>Post to use</code>（工具调用完成后）。</p>
+</li>
+<li><p><strong>匹配器 (<code>Matcher</code>)</strong>: 指定触发钩子的工具类型，例如文件修改工具。</p>
+</li>
+<li><p><strong>命令内容</strong>: 定义要执行的命令，例如运行<code>npx prettier check</code>来检查代码格式。</p>
+</li>
+<li><p><strong>工作流程</strong>: AI修改代码后，钩子立即触发代码格式检查，若发现错误，Claude Code会自动修复。</p>
+</li>
+<li><p><strong>触发事件</strong>: Claude Code官方文档列举了多种触发事件，可用于配置更多辅助开发的功能。</p>
+</li>
+</ul>
+<h2 id="七、-子代理-Subagents"><a href="#七、-子代理-Subagents" class="headerlink" title="七、 子代理 (Subagents)"></a>七、 子代理 (Subagents)</h2><ul>
+<li><p><strong>概念</strong>: 类似于编程中的子线程，允许Claude Code在后台开启多个子任务并行执行。</p>
+</li>
+<li><p><strong>优势</strong>:</p>
+</li>
+<li><p><strong>提高效率</strong>: 并行执行任务，加快完成速度。</p>
+</li>
+<li><p><strong>提高可预测性</strong>: 每个Subagent专注于一个小功能，结果更可控。</p>
+</li>
+<li><p><strong>提高成功率</strong>: 正确拆解复杂任务，提升任务完成成功率。</p>
+</li>
+<li><p><strong>创建 (<code>/agents</code> -&gt; <code>create</code>)</strong>:</p>
+</li>
+<li><p><strong>存储级别</strong>: 可选择项目级别或用户级别。</p>
+</li>
+<li><p><strong>配置</strong>:<br>*  描述: 自然语言描述Subagent的任务和期望结果（例如，代码审核大师，比较Git分支差异并提出审核意见）。<br>*  工具权限: 赋予Subagent所需工具的权限。<br>*  模型: 选择使用的模型。<br>*  颜色: 分配一个代表颜色。</p>
+</li>
+<li><p><strong>配置文件</strong>: 生成的配置文件存储在项目目录中。</p>
+</li>
+<li><p><strong>执行过程</strong>:</p>
+</li>
+</ul>
+<ol>
+<li>Claude Code接收任务后，根据Subagent的配置自动拆分出子任务。</li>
+<li>子任务分配给不同的Subagent并行执行。</li>
+<li>每个Subagent获取一份执行其子任务所需的精简上下文，避免被主对话污染，提高专注力。</li>
+<li>所有Subagent执行完成后，主Agent整合所有结果并给出完整回答。</li>
+</ol>
+<ul>
+<li><strong>应用</strong>: 可同时执行代码审核和天气查询等互不相关的任务，提高多任务处理能力。</li>
+</ul>
+<h2 id="八、-GitHub集成"><a href="#八、-GitHub集成" class="headerlink" title="八、 GitHub集成"></a>八、 GitHub集成</h2><h3 id="1-GitHub-CLI-工具"><a href="#1-GitHub-CLI-工具" class="headerlink" title="1. GitHub CLI 工具"></a>1. GitHub CLI 工具</h3><ul>
+<li><p><strong>工具</strong>: GitHub CLI 是一款命令行工具，Claude Code可借助它执行所有GitHub操作。</p>
+</li>
+<li><p><strong>安装</strong>: 下载并安装对应操作系统的GitHub CLI。</p>
+</li>
+<li><p><strong>验证</strong>: 执行<code>gh repo list</code>可验证安装和认证状态。</p>
+</li>
+</ul>
+<h3 id="2-集成应用场景"><a href="#2-集成应用场景" class="headerlink" title="2. 集成应用场景"></a>2. 集成应用场景</h3><ul>
+<li><strong>示例</strong>: 修复GitHub Issue并推送至仓库。</li>
+</ul>
+<ol>
+<li>要求Claude Code查看GitHub Issue内容（例如”缺少提交按钮”）。</li>
+<li>Claude Code读取Issue并进行本地代码修复。</li>
+<li>创建一个全新的修复分支。</li>
+<li>将修复分支推送到GitHub。</li>
+</ol>
+<ul>
+<li><strong>结果</strong>: Claude Code成功读取GitHub Issue，在本地完成代码修改，并将代码推送到GitHub，形成完美的闭环。</li>
+</ul>
+<h2 id="九、-历史对话与状态管理"><a href="#九、-历史对话与状态管理" class="headerlink" title="九、 历史对话与状态管理"></a>九、 历史对话与状态管理</h2><h3 id="1-历史对话回溯"><a href="#1-历史对话回溯" class="headerlink" title="1. 历史对话回溯"></a>1. 历史对话回溯</h3><ul>
+<li><strong><code>/resume</code></strong>:</li>
+<li><strong>功能</strong>: 查找并回溯之前的历史话题。</li>
+<li><strong>操作</strong>: 选择历史话题后，按两下<code>ESC</code>键可跳转到对话中的具体某句话之前，继续对话。</li>
+<li><strong>局限</strong>: 仅能回退对话内容，不能回退代码改动。</li>
+</ul>
+<h3 id="2-对话与代码同步回退"><a href="#2-对话与代码同步回退" class="headerlink" title="2. 对话与代码同步回退"></a>2. 对话与代码同步回退</h3><ul>
+<li><strong><code>ccundo</code> (开源项目)</strong>:</li>
+<li><strong>功能</strong>: 同时回退对话内容和代码状态。</li>
+<li><strong>安装</strong>: 需先安装<code>ccundo</code>工具。</li>
+<li><strong>使用</strong>:<br>*  <code>ccundo list</code>: 列出之前的所有对话记录及其编号。<br>*  <code>ccundo &lt;编号&gt;</code>: 将对话和代码内容同时回退到指定节点，继续工作。</li>
+</ul>
+<h3 id="3-对话内容导出"><a href="#3-对话内容导出" class="headerlink" title="3. 对话内容导出"></a>3. 对话内容导出</h3><ul>
+<li><strong><code>/export</code></strong>:</li>
+<li><strong>功能</strong>: 将当前对话内容复制到剪贴板。</li>
+<li><strong>用途</strong>: 可将对话内容保存为文件，或粘贴给其他AI（例如ChatGPT）进行交叉验证或进一步分析。</li>
+</ul>
+<h2 id="十、-可视化界面：Claudia"><a href="#十、-可视化界面：Claudia" class="headerlink" title="十、 可视化界面：Claudia"></a>十、 可视化界面：Claudia</h2><h3 id="1-Claudia-简介"><a href="#1-Claudia-简介" class="headerlink" title="1. Claudia 简介"></a>1. Claudia 简介</h3><ul>
+<li><p><strong>性质</strong>: 一个基于Claude Code打造的桌面可视化应用。</p>
+</li>
+<li><p><strong>社区</strong>: 在GitHub上获得大量关注。</p>
+</li>
+<li><p><strong>获取</strong>: 原始项目不提供安装包，需从源码编译。社区有开发者基于该项目提供了预编译的安装包版本，可在其Forks中找到Star数量较高的项目下载。</p>
+</li>
+</ul>
+<h3 id="2-Claudia-安装与配置"><a href="#2-Claudia-安装与配置" class="headerlink" title="2. Claudia 安装与配置"></a>2. Claudia 安装与配置</h3><ul>
+<li><p><strong>安装</strong>: 下载并安装对应操作系统的安装包。</p>
+</li>
+<li><p><strong>登录配置</strong>:</p>
+</li>
+<li><p><strong>官方账户</strong>: 若Claude Code使用官网账户登录，Claudia可直接使用。</p>
+</li>
+<li><p><strong>API&#x2F;CCR启动</strong>: 若Claude Code通过API或Claude Code Router启动，需在Claudia设置中配置API环境变量：<br>*  <code>Anthropic Auth Token</code>: 填写Claude Code控制台<code>Status</code>中显示的Token值。<br>*  <code>Anthropic Base URL</code>: 填写控制台中对应的URL。</p>
+</li>
+</ul>
+<h3 id="3-Claudia-主要功能"><a href="#3-Claudia-主要功能" class="headerlink" title="3. Claudia 主要功能"></a>3. Claudia 主要功能</h3><p>Claudia提供了命令行中Claude Code功能的图形化界面操作方式，并新增了部分特性：</p>
+<ul>
+<li><p><strong>历史项目与对话管理</strong>: 方便管理历史项目及对话记录。</p>
+</li>
+<li><p><strong>新建对话</strong>: 直接选择文件夹开始新的对话。</p>
+</li>
+<li><p><strong>模型思考长度调整</strong>: 左下角可调整AI的思考长度。</p>
+</li>
+<li><p><strong>可视化操作</strong>:</p>
+</li>
+<li><p>创建MCP。</p>
+</li>
+<li><p>编辑<code>cloud.md</code>系统提示词。</p>
+</li>
+<li><p>查看使用情况仪表板。</p>
+</li>
+<li><p>配置Subagent。</p>
+</li>
+<li><p>在设置中添加环境变量。</p>
+</li>
+<li><p>添加Hooks。</p>
+</li>
+<li><p>添加自定义命令。</p>
+</li>
+<li><p><strong>多标签页功能</strong>: 更方便地管理历史记录和对话上下文。</p>
+</li>
+<li><p><strong>时间导航线 (检查点)</strong>:</p>
+</li>
+<li><p><strong>功能</strong>: 允许用户创建文件系统状态和对话历史的检查点。</p>
+</li>
+<li><p><strong>操作</strong>:<br>1. 点击<code>create checkpoint</code>创建检查点。<br>2. AI进行文件修改（例如删除文件）。<br>3. 点击<code>restore</code>检查点。</p>
+</li>
+<li><p><strong>优势</strong>: 能够同时回退文件改动和之前的对话历史，将所有状态还原到检查点的时间点，弥补了原生Claude Code无法回退文件改动的不足。</p>
+</li>
+</ul>
+<h2 id="十一、-结语"><a href="#十一、-结语" class="headerlink" title="十一、 结语"></a>十一、 结语</h2><p>上述内容详细介绍了Claude Code在高级使用方面的诸多技巧，涵盖了从基础配置到复杂集成的大部分功能，旨在为用户提供全面而深入的参考。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">zhou</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/Notepad/12074.html">http://example.com/Notepad/12074.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Cmm's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Claude/">Claude</a><a class="post-meta__tags" href="/tags/AI%E5%B7%A5%E5%85%B7/">AI工具</a><a class="post-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/">编程工具</a><a class="post-meta__tags" href="/tags/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/">开发技巧</a></div><div class="post_share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/Notepad/58864.html" title="Claude Code Router - 强大的模型路由工具"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Claude Code Router - 强大的模型路由工具</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zhou</div><div class="author-info__description">我偶有灵光一现，便将其随手记录，以作未来回味。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zhouvs"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:dangnianmingyue1992@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.youtube.com/" target="_blank" title="Youtube"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i></a><a class="social-icon" href="https://space.bilibili.com/324920522" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #00a1d6;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">起风了，我在等风也等你。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Claude-Code-%E9%AB%98%E9%98%B6%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="toc-number">1.</span> <span class="toc-text">Claude Code 高阶使用技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81-Claude-Code-%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="toc-number">1.1.</span> <span class="toc-text">一、 Claude Code 基础设置与启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E6%A0%B8%E5%BF%83%E5%91%BD%E4%BB%A4%E4%B8%8E%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">二、 核心命令与上下文管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A1%B9%E7%9B%AE%E4%B8%8E%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 项目与上下文初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%B9%E8%AF%9D%E4%B8%8A%E4%B8%8B%E6%96%87%E4%BC%98%E5%8C%96"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 对话上下文优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%A8%A1%E5%9E%8B%E6%80%9D%E8%80%83%E6%B7%B1%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 模型思考深度控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BA%A4%E4%BA%92%E4%B8%8E%E8%AE%B0%E5%BF%86%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.2.4.</span> <span class="toc-text">4. 命令行交互与记忆模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81-IDE%E9%9B%86%E6%88%90%E4%B8%8E%E9%9D%9E%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">三、 IDE集成与非交互模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-IDE%E9%9B%86%E6%88%90"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. IDE集成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9D%9E%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 非交互模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81-%E6%A8%A1%E5%9E%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8D%8F%E8%AE%AE-MCP"><span class="toc-number">1.4.</span> <span class="toc-text">四、 模型上下文协议 (MCP)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-MCP-%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%8E%9F%E7%90%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. MCP 定义与原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MCP-%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%A1%E7%90%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. MCP 安装与管理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">五、 权限管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%B2%BE%E7%BB%86%E5%8C%96%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 精细化权限控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%AB%98%E6%9D%83%E9%99%90%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 高权限模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%92%A9%E5%AD%90-Hooks"><span class="toc-number">1.6.</span> <span class="toc-text">六、 自定义命令与钩子 (Hooks)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4"><span class="toc-number">1.6.1.</span> <span class="toc-text">1. 自定义命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%92%A9%E5%AD%90-Hooks"><span class="toc-number">1.6.2.</span> <span class="toc-text">2. 钩子 (Hooks)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81-%E5%AD%90%E4%BB%A3%E7%90%86-Subagents"><span class="toc-number">1.7.</span> <span class="toc-text">七、 子代理 (Subagents)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81-GitHub%E9%9B%86%E6%88%90"><span class="toc-number">1.8.</span> <span class="toc-text">八、 GitHub集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-GitHub-CLI-%E5%B7%A5%E5%85%B7"><span class="toc-number">1.8.1.</span> <span class="toc-text">1. GitHub CLI 工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%9B%86%E6%88%90%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.8.2.</span> <span class="toc-text">2. 集成应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81-%E5%8E%86%E5%8F%B2%E5%AF%B9%E8%AF%9D%E4%B8%8E%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86"><span class="toc-number">1.9.</span> <span class="toc-text">九、 历史对话与状态管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8E%86%E5%8F%B2%E5%AF%B9%E8%AF%9D%E5%9B%9E%E6%BA%AF"><span class="toc-number">1.9.1.</span> <span class="toc-text">1. 历史对话回溯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%B9%E8%AF%9D%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%90%8C%E6%AD%A5%E5%9B%9E%E9%80%80"><span class="toc-number">1.9.2.</span> <span class="toc-text">2. 对话与代码同步回退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AF%B9%E8%AF%9D%E5%86%85%E5%AE%B9%E5%AF%BC%E5%87%BA"><span class="toc-number">1.9.3.</span> <span class="toc-text">3. 对话内容导出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81-%E5%8F%AF%E8%A7%86%E5%8C%96%E7%95%8C%E9%9D%A2%EF%BC%9AClaudia"><span class="toc-number">1.10.</span> <span class="toc-text">十、 可视化界面：Claudia</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Claudia-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.10.1.</span> <span class="toc-text">1. Claudia 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Claudia-%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">1.10.2.</span> <span class="toc-text">2. Claudia 安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Claudia-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="toc-number">1.10.3.</span> <span class="toc-text">3. Claudia 主要功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81-%E7%BB%93%E8%AF%AD"><span class="toc-number">1.11.</span> <span class="toc-text">十一、 结语</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Notepad/12074.html" title="Claude Code 高阶使用技巧">Claude Code 高阶使用技巧</a><time datetime="2025-09-19T04:30:00.000Z" title="发表于 2025-09-19 12:30:00">2025-09-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Notepad/58864.html" title="Claude Code Router - 强大的模型路由工具">Claude Code Router - 强大的模型路由工具</a><time datetime="2025-09-14T02:00:00.000Z" title="发表于 2025-09-14 10:00:00">2025-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Notepad/12214.html" title="Rocket.Chat"><img src="https://i.111666.best/image/WvlcGL1UEk0haC1SpB7Xs7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Rocket.Chat"/></a><div class="content"><a class="title" href="/Notepad/12214.html" title="Rocket.Chat">Rocket.Chat</a><time datetime="2024-10-23T14:20:29.000Z" title="发表于 2024-10-23 22:20:29">2024-10-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Notepad/3890.html" title="[碎碎念念] 随波逐流"><img src="https://i.111666.best/image/hTfsfAF7H0s5pjDdqKcmkL.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[碎碎念念] 随波逐流"/></a><div class="content"><a class="title" href="/Notepad/3890.html" title="[碎碎念念] 随波逐流">[碎碎念念] 随波逐流</a><time datetime="2024-09-23T02:06:54.000Z" title="发表于 2024-09-23 10:06:54">2024-09-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Notepad/18356.html" title="open-webui"><img src="https://i.111666.best/image/ZroBxTVXTo9AgilFBV0xx0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="open-webui"/></a><div class="content"><a class="title" href="/Notepad/18356.html" title="open-webui">open-webui</a><time datetime="2024-09-17T18:31:25.000Z" title="发表于 2024-09-18 02:31:25">2024-09-18</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2025 By zhou</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.zhoujinfu.cc/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.zhoujinfu.cc/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.31/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/b8cf1317.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/eTIrvpB5DmsIJfvH2NpktF.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-06-06</span><a class="blog-slider__title" href="Notepad/b8cf1317.html" alt="">阳光不燥，微风正好</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/b8cf1317.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/15edad24.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/H5A3V6Srv9sIFTwTE2JaTK.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-07-06</span><a class="blog-slider__title" href="Notepad/15edad24.html" alt="">[Hexo] + Butterfly 博客个人卡片渐变色</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/15edad24.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/ad420578.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/CasiYSqGQL244XI2Ecg0Pp.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-08-06</span><a class="blog-slider__title" href="Notepad/ad420578.html" alt="">[Hexo] 主题背景一图流</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/ad420578.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/a108f7a7.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/k2JHBcBOHLEakvehX3Ur6h.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-08-08</span><a class="blog-slider__title" href="Notepad/a108f7a7.html" alt="">[Hexo] Chenmm`s</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/a108f7a7.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/fe562d3d.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/mUVHVPJdVKA8YMG6QdsAeX.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-01</span><a class="blog-slider__title" href="Notepad/fe562d3d.html" alt="">[Hexo] 文章轮播</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/fe562d3d.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/3873c0b1.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/MLXRN5ZX61bRomQS0ss76y.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-05</span><a class="blog-slider__title" href="Notepad/3873c0b1.html" alt="">[Hexo] 免费图床</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/3873c0b1.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/fc655f6c.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/SKf4oM2HobVYf0vCz2hFTg.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-06</span><a class="blog-slider__title" href="Notepad/fc655f6c.html" alt="">[Hexo] 博客</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/fc655f6c.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/70e0c8d1.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/98bMnI7TgCKPKAJjDTDUfg.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-09</span><a class="blog-slider__title" href="Notepad/70e0c8d1.html" alt="">[Hexo] 用Gulp压缩博客</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/70e0c8d1.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/10218.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/dC9myuK5QnIx8teDbBNQbw.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-17</span><a class="blog-slider__title" href="Notepad/10218.html" alt="">无病呻吟</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/10218.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/18356.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/ZroBxTVXTo9AgilFBV0xx0.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-18</span><a class="blog-slider__title" href="Notepad/18356.html" alt="">open-webui</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/18356.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/3890.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/hTfsfAF7H0s5pjDdqKcmkL.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-09-23</span><a class="blog-slider__title" href="Notepad/3890.html" alt="">[碎碎念念] 随波逐流</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/3890.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="Notepad/12214.html" alt=""><img width="48" height="48" src="https://i.111666.best/image/WvlcGL1UEk0haC1SpB7Xs7.jpg" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2024-10-23</span><a class="blog-slider__title" href="Notepad/12214.html" alt="">Rocket.Chat</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="Notepad/12214.html" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><!-- hexo injector body_end end --></body></html>
